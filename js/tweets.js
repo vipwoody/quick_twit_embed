@@ -11,7 +11,7 @@ $(document).ready(function () {
         // result
         var tweet = "";
         for (i = 0; i < data.length; i++) {
-        tweet += data[i].text + "</br>";
+        tweet += data[i].text + "</br></br>";
         }
       
         // links
