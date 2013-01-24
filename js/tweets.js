@@ -3,16 +3,16 @@
 $(document).ready(function () {		
 	
 	    // twitter id
-    var user = 'justinbieber'; //make sure you change that or else...
-          
+    var user = 'justinbieber';  //make sure you change that or else...
+    var num_of_tweets = 4;      //number of tweets to display
     // count
-    $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=3&include_rts=1&callback=?', function(data)      {
+    $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=' + num_of_tweets + '&include_rts=1&callback=?', function(data)      {
           
         // result
         var tweet = "";
-for (i = 0; i < data.length; i++) {
-tweet += data[i].text + "</br></br>";
-}
+        for (i = 0; i < data.length; i++) {
+        tweet += data[i].text + "</br></br>";
+        }
       
         // links
         tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
