@@ -1,10 +1,13 @@
-//Author: Woody Ghsoubi (w00dy.com)
-
+        // Written on 23 January 2013
+        // Author: Woody Ghsoubi (w00dy.com)
+        // Twitter: @vipwoody
+        // ADN: @wg
+        
 $(document).ready(function () {		
 	
 	    // twitter id
     var user = 'justinbieber';  //make sure you change this or else...
-    var num_of_tweets = 5;      //number of tweets to display
+    var num_of_tweets = 10;      //number of tweets to display
     // count
     $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=' + num_of_tweets + '&include_rts=1&callback=?', function(data)      {
           
