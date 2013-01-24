@@ -1,7 +1,4 @@
-        // Written on 23 January 2013
-        // Author: Woody Ghsoubi (w00dy.com)
-        // Twitter: @vipwoody
-        // ADN: @wg
+//Author: Woody Ghsoubi (w00dy.com)
 
 $(document).ready(function () {		
 	
