@@ -5,11 +5,13 @@
         
 $(document).ready(function () {		
 	
-	    // twitter id
-    var user = 'justinbieber';  //make sure you change this or else...
-    var num_of_tweets = 10;      //number of tweets to display
+        // twitter id
+    var user = 'justinbieber';          // make sure you change this or else...
+    var num_of_tweets = 10;         // number of tweets to display
+    var exclude_replies = true;     // exclude replies?
+    var include_rts = false;        // include retweets?
     // count
-    $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=' + num_of_tweets + '&include_rts=1&callback=?', function(data)      {
+    $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=' + num_of_tweets + '&include_rts=' + include_rts + '&exclude_replies=' + exclude_replies + '&callback=?', function(data){
           
         // result
         var tweet = "";
